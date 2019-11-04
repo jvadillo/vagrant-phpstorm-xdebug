@@ -36,12 +36,12 @@ sed -i '170,174 s/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.c
 service apache2 restart
 
 # Install MySQL (optional)
-# apt-get install mysql-server -y
+apt-get install mysql-server -y
 
 # Change mysql root password
-# service mysql start
-# mysql -u root --password="" -e "update mysql.user set authentication_string=password(''), plugin='mysql_native_password' where user='root';"
-# mysql -u root --password="" -e "flush privileges;"
+service mysql start
+mysql -u root --password="" -e "update mysql.user set authentication_string=password(''), plugin='mysql_native_password' where user='root';"
+mysql -u root --password="" -e "flush privileges;"
 
 # Install composer
 cd ~
