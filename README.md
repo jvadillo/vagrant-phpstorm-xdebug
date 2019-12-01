@@ -14,4 +14,14 @@ La máquina virtual está preparada como servidor LAMP (Linux, Apache, MySQL, PH
 ### 2. Configuración de PhpStorm ([videotutorial](https://www.youtube.com/watch?v=jEkldlxIOiE]))
 1. Configurar PhpStorm
 
+## Nota
+En caso de necesitar acceso a Internet desde la máquina virtual, añadir lo siguiente al Vagrantfile:
+```
+config.vm.provider "virtualbox" do |v|
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+end
+```
+Esto puede ser necesario por ejemplo si quieres instalar paquetes mediante composer.
+
 
