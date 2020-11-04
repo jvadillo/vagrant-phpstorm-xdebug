@@ -42,7 +42,7 @@ display_errors = On
 sudo service apache2 restart
 ```
 
-### Rstablecer contraseña en MySQL
+### Restablecer contraseña en MySQL
 En caso de tener problemas para acceder, seguir los siguientes pasos:
 
 1. Parar el servicio: `sudo service mysql stop`
@@ -51,18 +51,5 @@ En caso de tener problemas para acceder, seguir los siguientes pasos:
 4. Ejecutar `sudo mysql -u root --password="" -e "flush privileges;"`
 
 Ahora ya podrás acceder a la base de datos como root.
-
-```
-sudo nano /etc/php/7.2/apache2/php.ini
-```
-3. Buscar la propiedad `display_errors` (puedes emprear el comando CTRL+W) y establecer su valor a On.
-```
-display_errors = On
-```
-4. Guardar los cambios y reiniciar el servidor Apache:
-```
-sudo service apache2 restart
-```
-
 
 
