@@ -20,6 +20,8 @@ En caso de utilizar VS Code, recomendamos configurar el IDE de la siguiente form
 - Deshabilita las opciones de PHP que vienen por defecto. Para ello busca "@builtin php" en el buscador de extensiones y deshabilítalo.
 - Si quieres abrir tus archivos .php en el navegador desde VS Code, puedes hacerlo instalando la extensión Open [PHP/HTML/JS In Browser](https://marketplace.visualstudio.com/items?itemName=PrimaFuture.open-php-html-js-in-browser). Una vez hecho, para que al abrir los archivos .php lo haga utilizando el servidor de Vagrant, tendrás que ir a `Settings > Extensions > Open PHP/HTML/JS In Browser` y establecer el Custom Host (con el valor `localhost:8765` en nuestro caso) y Custom URL to open (con el valor `http://${host}/${relativeDirnameDocumentRoot}/${relativeFile}`).
 
+Más información disponible en [este enlace](https://www.digitalocean.com/community/tutorials/how-to-set-up-visual-studio-code-for-php-projects).
+
 ## Extras
 ### Habilitar acceso a Internet a la máquina
 En caso de necesitar acceso a Internet desde la máquina virtual, añadir lo siguiente al Vagrantfile:
