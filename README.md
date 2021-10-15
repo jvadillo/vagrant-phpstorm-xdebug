@@ -11,8 +11,14 @@ La máquina virtual está preparada como servidor LAMP (Linux, Apache, MySQL, PH
 3. Crear fichero de configuración de Vagrant en el directorio del proyecto.
 4. Crear script de instalación del entorno (PHP + Apache + MySQL + Xdebug).
 
-### 2. Configuración de PhpStorm ([videotutorial](https://www.youtube.com/watch?v=jEkldlxIOiE]))
-1. Configurar PhpStorm
+### 2a. Configuración de PhpStorm ([videotutorial](https://www.youtube.com/watch?v=jEkldlxIOiE]))
+Configurar PhpStorm siguiendo los pasos del videotutorial.
+
+### 2b. Configuración de VS Code
+En caso de utilizar VS Code, recomendamos configurar el IDE de la siguiente forma:
+- Instala la extensión PHP Intelephense
+- Deshabilita las opciones de PHP que vienen por defecto. Para ello busca "@builtin php" en el buscador de extensiones y deshabilítalo.
+- Si quieres abrir tus archivos .php en el navegador desde VS Code, puedes hacerlo instalando la extensión Open PHP/HTML/JS In Browser. Una vez hecho, para que al abrir los archivos .php lo haga utilizando el servidor de Vagrant, tendrás que ir a `Settings > Extensions > Open PHP/HTML/JS In Browser` y establecer el Custom Host (con el valor `localhost:8765` en nuestro caso) y Custom URL to open (con el valor `http://${host}/${relativeDirnameDocumentRoot}/${relativeFile}`).
 
 ## Extras
 ### Habilitar acceso a Internet a la máquina
